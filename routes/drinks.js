@@ -1,12 +1,12 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-
+const drinks = require('../data/drinks.json');
 const router = express.Router();
 app.use(express.static('public'));
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
-
+app.use(express.json());
 // Define a route to handle requests for the menu
 router.get('/', (req, res) => {
     // Read the JSON data from the file
@@ -44,6 +44,17 @@ router.get('/list', (req, res) => {
     });
 });
 //########################################################################
-
+router.get('/drink', (req, res) => {
+    fs.readFile('./data/drinks.json','utf8',(err,data)=>{
+        if(err){
+            console.log(err);
+            res.status(500).send('Error loading data');
+        } else {
+            let d=JSON.parse(data);
+            res.json(d);
+        }
+    }
+        )
+  });
 module.exports = router;
 

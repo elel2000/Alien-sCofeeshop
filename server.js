@@ -23,7 +23,6 @@ let aliens = require(`./data/profile.json`);
 
 app.use('/aliens', userRouter);  //this is how we can use the router in a specific route
 
-
 // app.get('/aliens/:name',)
 
 app.use('/reservation', resRouter);
