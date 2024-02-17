@@ -30,16 +30,6 @@
         "preferredLanguage": "Sirian Galactic"
     },
     {
-        "id": 4,
-        "name": "Proximan",
-        "planet": "Proxima Centauri",
-        "species": "Proximan",
-        "age": 88,
-        "gender": "Female",
-        "contactInformation": "proximan88@proximacentauri.io",
-        "preferredLanguage": "Proximan Dialect"
-    },
-    {
         "id": 5,
         "name": "Betelgeusian",
         "planet": "Betelgeuse",
@@ -80,13 +70,13 @@
         "id": 8
     },
     {
-        "name": "cash",
-        "age": "374",
-        "planet": "Mars",
-        "species": "No-banry",
-        "preferredLanguage": "Barber",
+        "name": "Vilgax",
+        "age": "543",
+        "planet": "Viltron",
+        "species": "Vig",
+        "preferredLanguage": "Vilgo",
         "gender": "Male",
-        "contactInformation": "exmples@gmail.com",
+        "contactInformation": "Cil@gmail.com",
         "id": 9
     }
 ]

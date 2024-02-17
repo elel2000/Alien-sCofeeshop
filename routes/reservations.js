@@ -79,33 +79,6 @@ router.get('/search/:userId', (req, res) => {
     }
 });
 
-// Add a new reservation
-router.post('/', (req, res) => {
-    const newReservation = req.body;
-    let userExists = false;
-    for (let i = 0; i < aliens.length; i++) {
-        if (aliens[i].id === Number(newReservation.clientId)) {
-            userExists = true;
-            break;
-        }
-    }
-    // Automatically assign the next available ID
-    const nextId = reservations.length > 0 ? reservations[reservations.length - 1].id + 1 : 1;
-    newReservation.id = nextId;
-    if (userExists) {
-        reservations.push(newReservation);
-        fs.writeFile('./data/reservation.json', JSON.stringify(reservations, null, 4), 'utf8', (err) => {
-            if (err) {
-                console.error('Error writing JSON file', err);
-                res.status(500).send('Internal Server Error');
-                return;
-            }
-            res.status(201).send('Reservation added successfully');
-        });
-    } else {
-        res.status(400).send('User does not exist');
-    }
-});
 
 // Update a reservation
 router.put('/:id', (req, res) => {

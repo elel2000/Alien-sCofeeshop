@@ -10,11 +10,6 @@ app.set('view engine', 'ejs');
 
 
 
-
-router.get('/profile', (req, res, next) => {
-    res.status(200).json(aliens)
-})
-router.post('/adduser', addUser);
 //###########################################################################
  //home page redirect:
 router.get('/start', (req, res) => {
