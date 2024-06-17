@@ -30,8 +30,8 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/alien-coffee-shop-reservations.git
-    cd alien-coffee-shop-reservations
+    git clone https://github.com/hamzaelalamy/Alien-sCofeeshop.git
+    cd Alien-sCofeeshop-master
     ```
 
 2. **Install the dependencies**:
